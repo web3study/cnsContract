@@ -1,8 +1,6 @@
-# cnsContract
-cns contract
+# CNS Contract
 
-
-Conflux espace testnet chainId 71
+## Conflux espace testnet chainId 71
 
 CNSRegistry: 0xC08f4258a1C311Ff619Da9f05DE9C0a061cC6484
 
@@ -21,7 +19,8 @@ DefaultReverseResolver: 0x7d96aF91527f21d36041e47db4028921e541064b
 ReverseRegistrar: 0xFF504259595237D4Ce1F9a5886D55a1848E2C73a
 
 ---
-Conflux espace mainnet chainId 1030
+
+## Conflux espace mainnet chainId 1030
 
 CNSRegistry: 0xC08f4258a1C311Ff619Da9f05DE9C0a061cC6484
 
