@@ -1,0 +1,508 @@
+{
+  "contractName": "PriceOracle",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "expires",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "duration",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "dealer",
+          "type": "address"
+        }
+      ],
+      "name": "price",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.4+commit.c7e474f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"expires\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"duration\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"dealer\",\"type\":\"address\"}],\"name\":\"price\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"price(string,uint256,uint256,address)\":{\"details\":\"Returns the price to register or renew a name.\",\"params\":{\"duration\":\"How long the name is being registered or extended for, in seconds.\",\"expires\":\"When the name presently expires (0 if this is a new registration).\",\"name\":\"The name being registered or renewed.\"},\"returns\":{\"_0\":\"The price of this renewal or registration, in wei.\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/ynsregistry/PriceOracle.sol\":\"PriceOracle\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/ynsregistry/PriceOracle.sol\":{\"keccak256\":\"0x708ccd2fb4d04eb75cab403f3d6324a38a69ad4c807a44cb3f47c12ce843b688\",\"license\":\"UNLICCNSED\",\"urls\":[\"bzz-raw://b808b98b0eba2ecbcfa818d2e59fa36f1190b857e3b7f33239db39f867077e1d\",\"dweb:/ipfs/QmapqhnJNrF7pjCQgxCvuWNKSALfW6tvpzPM3YVLaRif79\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: UNLICCNSED\n\npragma solidity >=0.8.4;\n\ninterface PriceOracle {\n    /**\n     * @dev Returns the price to register or renew a name.\n     * @param name The name being registered or renewed.\n     * @param expires When the name presently expires (0 if this is a new registration).\n     * @param duration How long the name is being registered or extended for, in seconds.\n     * @return The price of this renewal or registration, in wei.\n     */\n    function price(string calldata name, uint expires, uint duration,address dealer) external view returns(uint);\n}\n",
+  "sourcePath": "/Users/yzbbanban/Downloads/money/chk/nftbox/bns/yns-sol-master-025696b23c531f8117f2fb03dee6f8c96f21692e/contracts/ynsregistry/PriceOracle.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/ynsregistry/PriceOracle.sol",
+    "exportedSymbols": {
+      "PriceOracle": [
+        9372
+      ]
+    },
+    "id": 9373,
+    "license": "UNLICCNSED",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 9357,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".4"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "40:24:56"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 9372,
+        "linearizedBaseContracts": [
+          9372
+        ],
+        "name": "PriceOracle",
+        "nameLocation": "76:11:56",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 9358,
+              "nodeType": "StructuredDocumentation",
+              "src": "94:372:56",
+              "text": " @dev Returns the price to register or renew a name.\n @param name The name being registered or renewed.\n @param expires When the name presently expires (0 if this is a new registration).\n @param duration How long the name is being registered or extended for, in seconds.\n @return The price of this renewal or registration, in wei."
+            },
+            "functionSelector": "89fce619",
+            "id": 9371,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "price",
+            "nameLocation": "480:5:56",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 9367,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9360,
+                  "mutability": "mutable",
+                  "name": "name",
+                  "nameLocation": "502:4:56",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9371,
+                  "src": "486:20:56",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_calldata_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 9359,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "486:6:56",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9362,
+                  "mutability": "mutable",
+                  "name": "expires",
+                  "nameLocation": "513:7:56",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9371,
+                  "src": "508:12:56",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9361,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "508:4:56",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9364,
+                  "mutability": "mutable",
+                  "name": "duration",
+                  "nameLocation": "527:8:56",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9371,
+                  "src": "522:13:56",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9363,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "522:4:56",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9366,
+                  "mutability": "mutable",
+                  "name": "dealer",
+                  "nameLocation": "544:6:56",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9371,
+                  "src": "536:14:56",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 9365,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "536:7:56",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "485:66:56"
+            },
+            "returnParameters": {
+              "id": 9370,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9369,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9371,
+                  "src": "574:4:56",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9368,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "574:4:56",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "573:6:56"
+            },
+            "scope": 9372,
+            "src": "471:109:56",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 9373,
+        "src": "66:516:56",
+        "usedErrors": []
+      }
+    ],
+    "src": "40:543:56"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/ynsregistry/PriceOracle.sol",
+    "exportedSymbols": {
+      "PriceOracle": [
+        9372
+      ]
+    },
+    "id": 9373,
+    "license": "UNLICCNSED",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 9357,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".4"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "40:24:56"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 9372,
+        "linearizedBaseContracts": [
+          9372
+        ],
+        "name": "PriceOracle",
+        "nameLocation": "76:11:56",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 9358,
+              "nodeType": "StructuredDocumentation",
+              "src": "94:372:56",
+              "text": " @dev Returns the price to register or renew a name.\n @param name The name being registered or renewed.\n @param expires When the name presently expires (0 if this is a new registration).\n @param duration How long the name is being registered or extended for, in seconds.\n @return The price of this renewal or registration, in wei."
+            },
+            "functionSelector": "89fce619",
+            "id": 9371,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "price",
+            "nameLocation": "480:5:56",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 9367,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9360,
+                  "mutability": "mutable",
+                  "name": "name",
+                  "nameLocation": "502:4:56",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9371,
+                  "src": "486:20:56",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_calldata_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 9359,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "486:6:56",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9362,
+                  "mutability": "mutable",
+                  "name": "expires",
+                  "nameLocation": "513:7:56",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9371,
+                  "src": "508:12:56",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9361,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "508:4:56",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9364,
+                  "mutability": "mutable",
+                  "name": "duration",
+                  "nameLocation": "527:8:56",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9371,
+                  "src": "522:13:56",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9363,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "522:4:56",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9366,
+                  "mutability": "mutable",
+                  "name": "dealer",
+                  "nameLocation": "544:6:56",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9371,
+                  "src": "536:14:56",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 9365,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "536:7:56",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "485:66:56"
+            },
+            "returnParameters": {
+              "id": 9370,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9369,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9371,
+                  "src": "574:4:56",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9368,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "574:4:56",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "573:6:56"
+            },
+            "scope": 9372,
+            "src": "471:109:56",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 9373,
+        "src": "66:516:56",
+        "usedErrors": []
+      }
+    ],
+    "src": "40:543:56"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.4+commit.c7e474f2.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2022-08-20T14:34:01.410Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "price(string,uint256,uint256,address)": {
+        "details": "Returns the price to register or renew a name.",
+        "params": {
+          "duration": "How long the name is being registered or extended for, in seconds.",
+          "expires": "When the name presently expires (0 if this is a new registration).",
+          "name": "The name being registered or renewed."
+        },
+        "returns": {
+          "_0": "The price of this renewal or registration, in wei."
+        }
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
